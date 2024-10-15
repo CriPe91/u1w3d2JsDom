@@ -55,26 +55,46 @@ addToTheSecond();
           Scrivi una funzione che aggiunga un paragrafo al primo div
        */
 
-const addParagraph = function () {};
-
+const addParagraph = function () {
+  let firstDiv = document.querySelector("div");
+  let newParagraph = document.createElement("p");
+  newParagraph.innerText = "Aggiunta paragrafo nel primo div";
+  firstDiv.appendChild(newParagraph);
+};
+addParagraph();
 /* ESERCIZIO 7
           Scrivi una funzione che faccia scomparire la prima lista non ordinata
        */
 
-const hideFirstUl = function () {};
-
+const hideFirstUl = function () {
+  let firstList = document.querySelector("ul");
+  firstList.onclick = function () {
+    firstList.remove(firstList);
+  };
+};
+hideFirstUl();
 /* ESERCIZIO 8
           Scrivi una funzione che renda verde il background di ogni lista non ordinata
          */
 
-const paintItGreen = function () {};
-
+const paintItGreen = function () {
+  let list = document.querySelectorAll("ul");
+  list.forEach((list) => {
+    list.style.backgroundColor = "green";
+  });
+};
+paintItGreen();
 /* ESERCIZIO 9
           Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
          */
 
-const makeItClickable = function () {};
-
+const makeItClickable = function () {
+  let h1 = document.querySelector("h1");
+  h1.onclick = function () {
+    h1.innerText = h1.innerText.slice(0, -1);
+  };
+};
+makeItClickable();
 /* ESERCIZIO 10
           Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
          */
