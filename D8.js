@@ -33,13 +33,23 @@ changePcontent();
           Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
          */
 
-const changeUrls = function () {};
+const changeUrls = function () {
+  let newLink = document.querySelector("a");
+  newLink.href = "https://www.google.com";
+};
+changeUrls();
 
 /* ESERCIZIO 5
           Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
        */
 
-const addToTheSecond = function () {};
+const addToTheSecond = function () {
+  let newLi = document.getElementById("secondList");
+  let newElement = document.createElement("li");
+  newElement.innerText = "Nuovo Elemento";
+  newLi.appendChild(newElement);
+};
+addToTheSecond();
 
 /* ESERCIZIO 6
           Scrivi una funzione che aggiunga un paragrafo al primo div
